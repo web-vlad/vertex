@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'MS_Reference';
+    src: url('../fonts/MS_Reference.eot');
+    src: url('../fonts/MS_Reference.eot') format('embedded-opentype'),
+    url('../fonts/MS_Reference.woff2') format('woff2'),
+    url('../fonts/MS_Reference.woff') format('woff'),
+    url('../fonts/MS_Reference.ttf') format('truetype'),
+    url('../fonts/MS_Reference.svg#MS_Reference') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PT-sans_regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PT-sans_bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../fonts/Roboto-slab-regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../fonts/Roboto-slab-bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Alegreya Sans SC";
+    src: url(../fonts/Alegreyasansscmedium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
