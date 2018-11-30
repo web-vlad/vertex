@@ -40,3 +40,13 @@
     font-weight: 500;
     font-style: normal;
 }
+@font-face {
+    font-family: "PT-sans_b-b";
+    src: url('../fonts/pt-sans_b.eot');
+    src: url('../fonts/pt-sans_b.eot') format('embedded-opentype'),
+    url('../fonts/pt-sans_b.woff') format('woff'),
+    url('../fonts/pt-sans_b.ttf') format('truetype'),
+    url('../fonts/pt-sans_b.svg#MS_Reference') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}

@@ -27,25 +27,26 @@ $(document).ready(function() {
 			e.stopPropagation();
 			e.preventDefault();
 		});
-        /*$('.close-menu').click(function() {
-			$('.button-menu').removeClass('active');
+        $('.box-main-menu .close-menu').click(function() {
+			//$('.button-menu').removeClass('active');
 			$('.box-main-menu').removeClass('open');
-		});*/
+		});
 	
 		$('body').click(function(e){
 			//e.stopPropagation();
 			//$('.header-second-menu .button-menu').removeClass('active');
-			$('.header-second-menu .box-main-menu').removeClass('open');
+			//$('.header-second-menu .box-main-menu').removeClass('open');
 		});
 
 
-    /*$('.button-menu').click(function(e) {
-        $('.button-menu').toggleClass('active');
-        $('.box-main-menu').toggleClass('open');
+    $('.header-button-menu .button-menu').click(function(e) {
+        /*$('.button-menu').toggleClass('active');
+        $('.box-main-menu').toggleClass('open');*/
+        $('.header-second .header-menu').slideToggle();
         e.stopPropagation();
         e.preventDefault();
     });
-    $('.close-menu').click(function() {
+    /*$('.close-menu').click(function() {
         $('.button-menu').removeClass('active');
         $('.box-main-menu').removeClass('open');
     });
