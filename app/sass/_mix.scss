@@ -60,3 +60,10 @@
     top: 0;
     left: 0;
 }
+@mixin sprite-pseudo() {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: 0;
+}

@@ -32,10 +32,10 @@ $(document).ready(function() {
 			$('.box-main-menu').removeClass('open');
 		});
 	
-		$('body').click(function(e){
+		$(".allWrapper:not('.main-menu > li')").click(function(e){
 			//e.stopPropagation();
 			//$('.header-second-menu .button-menu').removeClass('active');
-			//$('.header-second-menu .box-main-menu').removeClass('open');
+			$('.header-second-menu .box-main-menu').removeClass('open');
 		});
 
 
