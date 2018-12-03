@@ -51,6 +51,11 @@
     -o-transform-origin: center center;
     -ms-transform-origin: center center;
 }
+@mixin pseudo() {
+    position: absolute;
+    display: block;
+    content: "";
+}
 @mixin all-pseudo() {
     position: absolute;
     display: block;

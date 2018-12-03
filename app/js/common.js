@@ -32,7 +32,7 @@ $(document).ready(function() {
 			$('.box-main-menu').removeClass('open');
 		});
 	
-		$(".allWrapper:not('.main-menu > li')").click(function(e){
+		$(".allWrapper:not('.main-menu')").click(function(e){
 			//e.stopPropagation();
 			//$('.header-second-menu .button-menu').removeClass('active');
 			$('.header-second-menu .box-main-menu').removeClass('open');
@@ -46,16 +46,27 @@ $(document).ready(function() {
         e.stopPropagation();
         e.preventDefault();
     });
-    /*$('.close-menu').click(function() {
-        $('.button-menu').removeClass('active');
-        $('.box-main-menu').removeClass('open');
-    });
 
-    $('body').click(function(e){
-        //e.stopPropagation();
-        $('.button-menu').removeClass('active');
-        $('.box-main-menu').removeClass('open');
-    });*/
+    // VIDEO
+    var controls = {
+        video: $(".h-video"),
+        playpause: $(".h-paused")
+    };
+
+    var video = controls.video[0];
+
+    controls.playpause.click(function(){
+        if (video.paused) {
+            video.play();
+            //$(this).toggleClass('play');
+        } else {
+            video.pause();
+            //$(this).removeClass('play');
+        }
+
+        $(this).toggleClass("paused");
+        $(this).toggleClass('play');
+    });
 
    /* // PARALAX
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {

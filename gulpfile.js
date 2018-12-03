@@ -40,7 +40,7 @@ gulp.task("html", function() {
 // Combine, compile Sass in CSS, install Vend. prefixes and further minimization of the code
 gulp.task("sass", function() {
     return gulp.src("app/sass/*.scss")
-        .pipe(concat('style.scss'))
+        //.pipe(concat('style.scss'))
         .pipe(sass())
         /*.pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -136,6 +136,9 @@ var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты �
 var post = gulp.src("app//*.php") // Переносим шрифты в продакшен
     .pipe(gulp.dest('dist/'))
 
+// video
+var buildFonts = gulp.src('app/video/**/*') // Переносим шрифты в продакшен
+    .pipe(gulp.dest('dist/video'))
 
 // The task of tracking changed files
 gulp.task("watch", function() {
