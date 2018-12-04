@@ -32,11 +32,11 @@ $(document).ready(function() {
 			$('.box-main-menu').removeClass('open');
 		});
 	
-		$(".allWrapper:not('.main-menu')").click(function(e){
+		/*$(".allWrapper:not('.main-menu')").click(function(e){
 			//e.stopPropagation();
 			//$('.header-second-menu .button-menu').removeClass('active');
 			$('.header-second-menu .box-main-menu').removeClass('open');
-		});
+		});*/
 
 
     $('.header-button-menu .button-menu').click(function(e) {
