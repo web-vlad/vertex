@@ -10,9 +10,11 @@
 
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:500,700|PT+Sans:400,700|Roboto+Slab:400,700" rel="stylesheet" />
     
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"?v=2 />
+    <link rel="stylesheet" type="text/css" href="css/libs.min.css"?v=2 />
 
 </head>
+
 <body>
 
     <div class="allWrapper">
@@ -339,7 +341,12 @@
             </div>
 
             <div class="block-button">
-                <a class="btn" href="#">БОЛЬШЕ ВИДЕО</a>
+                <a class="block-button__link button-animat"  href="#">
+                    <i class="chevron chevron--first"></i>
+                    <!--<i class="chevron"></i>-->
+                    <i class="chevron chevron--last"></i>
+                    <span class="btn">БОЛЬШЕ ВИДЕО</span>
+                </a>
             </div>
 
         </div>
@@ -461,7 +468,7 @@
             <div class="siteWidth">
                 <div class="row">
                     <div class="col">
-                        <h2 class="title title-right"><strong>Отзывы</strong> <span>наших студентов</span></h2>
+                        <h2 class="title title-right"><span class="font-b">Отзывы</span> <span class="font-s title-right__box">наших студентов</span></h2>
 
                         <div class="list-reviews row">
                             <div class="item-review col">
@@ -544,47 +551,47 @@
     <!-- BEGIN BLOCK INSTAGRAM -->
         <div class="sectionInstagram">
             <div class="siteWidth">
-                <div class="row">
-                    <div class="insta-title col">
-                        <h2 class="title">Следи за нами в instagram</h2>
-                    </div>
-                    <div class="insta-link col">
-                        <a class="btn-rss" href="#">подписаться</a>
-                    </div>
-
-                    <!--<div id="instafeed"></div> -->
-
-                    <div class="insta-list col">
-                        <div class="list-instagram row">
-                            <div class="item-instagram col">
-                                <a class="box-img" href="#">
-                                    <img src="images/insta_1.jpg" alt="#" />
-                                </a>
-                            </div>
-                            <div class="item-instagram col">
-                                <a class="box-img" href="#">
-                                    <img src="images/insta_2.jpg" alt="#" />
-                                </a>
-                            </div>
-                            <div class="item-instagram col">
-                                <a class="box-img" href="#">
-                                    <img src="images/insta_3.jpg" alt="#" />
-                                </a>
-                            </div>
-                            <div class="item-instagram col">
-                                <a class="box-img" href="#">
-                                    <img src="images/insta_4.jpg" alt="#" />
-                                </a>
-                            </div>
-                            <!--<div class="item-instagram col">
-                                <a class="box-img" href="#">
-                                    <img src="images/insta_5.jpg" alt="#" />
-                                </a>
-                            </div>-->
-                        </div>
-                    </div>
-
+                <div class="insta-title">
+                    <h2 class="title title--instagram title-right">
+                        <span class="font-s">cледи за нами в</span> <span class="font-b title-right__box">instagram</span>
+                    </h2>
+                    <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque.Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.</p>
                 </div>
+
+                <div class="insta-list">
+                    <div class="list-instagram row">
+                        <div class="item-instagram col">
+                            <a class="box-img" href="#">
+                                <img src="images/insta_1.jpg" alt="#" />
+                            </a>
+                        </div>
+                        <div class="item-instagram col">
+                            <a class="box-img" href="#">
+                                <img src="images/insta_2.jpg" alt="#" />
+                            </a>
+                        </div>
+                        <div class="item-instagram col">
+                            <a class="box-img" href="#">
+                                <img src="images/insta_3.jpg" alt="#" />
+                            </a>
+                        </div>
+                        <div class="item-instagram col">
+                            <a class="box-img" href="#">
+                                <img src="images/insta_4.jpg" alt="#" />
+                            </a>
+                        </div>
+                        <!--<div class="item-instagram col">
+                            <a class="box-img" href="#">
+                                <img src="images/insta_5.jpg" alt="#" />
+                            </a>
+                        </div>-->
+                    </div>
+                </div>
+
+                <div class="insta-link">
+                    <a class="btn-rss" href="#">подписаться</a>
+                </div>
+
             </div>
         </div>
     <!-- END BLOCK INSTAGRAM -->
