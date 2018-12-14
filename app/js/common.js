@@ -139,6 +139,35 @@ $(document).ready(function() {
         ]
     });
 
+    // SLIDER WE
+    $('.slider-we').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        autoplay: false,
+        speed: 1000,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    //arrows: false,
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    //variableWidth: false,
+                    //arrows: false,
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
 
 });
 
