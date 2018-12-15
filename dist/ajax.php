@@ -11,10 +11,11 @@ include "libmail.php";
 	//$m->To("im04@il.i");
 
 	if(isset($_POST['order-call-2'])) {
-		$m->Subject('Order insurance');
-        $body   =   '<p><b>Name:</b> '.$_POST['name'].'</p>'
+		$m->Subject('Контакт');
+        $body   =   '<p><b>Имя:</b> '.$_POST['name'].'</p>'
+            .'<p><b>Телефон:</b> '.$_POST['phone'].'</p>'
             .'<p><b>Email:</b> '.$_POST['email'].'</p>'
-            .'<p><b>Message:</b> '.$_POST['message'].'</p>';
+            .'<p><b>Сообщение:</b> '.$_POST['message'].'</p>';
         echo "thanks";
 	}
     
