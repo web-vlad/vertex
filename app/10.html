@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--<link rel="icon" type="image/png" href="favicon.png" />-->
+	<title>Vertex Shool</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:500,700|PT+Sans:400,700|Roboto+Slab:400,700" rel="stylesheet" />
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css"?v=2 />
+    <link rel="stylesheet" type="text/css" href="css/libs.min.css"?v=2 />
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs2_FYnTKje6F8lvmiihQ8losSDRV80hM" type="text/javascript"></script>
+    <script>
+        google.maps.event.addDomListener(window, 'load', function() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: new google.maps.LatLng(50.102444, 14.392767),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                /* mapTypeControl: false,
+                 navigationControl: false,
+                 scrollwheel: false,  //scroll zoom
+                 scaleControl: false,      // scroll move
+                 draggable: false,*/
+                zoomControl: false,
+                scrollwheel: false,
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(50.102444, 14.392767), // New York
+
+                /*navigationControlOptions: {
+                 style: google.maps.NavigationControlStyle.SMALL
+                 },*/
+                mapTypeControlOptions: {
+                    position: google.maps.ControlPosition.LEFT_BOTTOM
+                },
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                // styles: [{"featureType":"all","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"on"}]}]
+                styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"off"},{"color":"#fff7f7"}]},{"featureType":"landscape.man_made","elementType":"labels","stylers":[{"visibility":"off"},{"hue":"#ff0000"}]},{"featureType":"landscape.man_made","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"poi.business","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#0031ff"}]},{"featureType":"poi.business","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#6100ff"}]},{"featureType":"poi.business","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#3900ff"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"simplified"},{"color":"#000000"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"simplified"},{"saturation":"-100"},{"lightness":"-7"},{"gamma":"1.34"},{"weight":"0.75"}]},{"featureType":"poi.government","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"},{"color":"#442121"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"on"},{"color":"#ff0000"}]},{"featureType":"poi.school","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"geometry.stroke","stylers":[{"visibility":"on"}]},{"featureType":"poi.school","elementType":"labels.text","stylers":[{"visibility":"simplified"},{"color":"#000000"}]},{"featureType":"poi.school","elementType":"labels.icon","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45},{"visibility":"on"},{"color":"#bcbcbc"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"},{"color":"#000000"},{"saturation":"-73"},{"lightness":"-43"},{"weight":"0.83"}]},{"featureType":"road","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"transit.line","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#ffffff"},{"visibility":"off"}]},{"featureType":"water","elementType":"geometry","stylers":[{"visibility":"off"},{"color":"#6100ff"}]}]
+            });
+
+            var infoWindow = new google.maps.InfoWindow;
+
+            var onMarkerClick = function() {
+                var marker = this;
+                var latLng = marker.getPosition();
+                infoWindow.setContent(marker.title);
+
+                infoWindow.open(map, marker);
+            };
+            google.maps.event.addListener(map, 'click', function() {
+                infoWindow.close();
+            });
+
+            var marker1 = new google.maps.Marker({
+                position: new google.maps.LatLng(50.102444, 14.392767),
+                map: map,
+                title: ''
+
+            });
+
+            google.maps.event.addListener(marker1, 'click', onMarkerClick);
+
+        });
+    </script>
+
+</head>
+<body class="page-contact">
+
+    <!-- BEGIN ALL WRAPPER -->
+    <div class="allWrapper">
+
+        <!-- BEGIN HEADER -->
+        <header class="header">
+            <div class="header-one">
+                <div class="siteWidth">
+                    <div class="row">
+                        <div class="header-logo col">
+                            <strong class="logo">
+                                <span class="logo__item logo__item--img">
+                                    <img src="img/logo.png" alt="#" />
+                                </span>
+                                <span class="logo__item logo__item--slogan">Языковые курсы при университете в Праге</span>
+                            </strong>
+                        </div>
+
+                        <div class="box-contact col">
+                            <ul class="block-contact">
+                                <li class="block-contact__item">
+                                    <a class="block-contact__link" href="tel:+420776170817">+420 776 170 817</a>
+                                </li>
+                                <li class="block-contact__item">
+                                    <a class="block-contact__link" href="mailto:info@vertexschool.cz">info@vertexschool.cz</a>
+                                </li>
+                            </ul>
+                            <ul class="block-social">
+                                <li  class="block-social__item">
+                                    <a class="block-social__link block-social__link--inst" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+                                            <g>
+                                                <g>
+                                                    <path d="M16,0c2.2,0,4.4,0,6.6,0c2.1,0,4,0.5,5.7,1.8c2.2,1.7,3.3,3.9,3.6,6.6c0.1,1,0.1,1.9,0.1,2.9c0,3.7,0,7.5,0,11.2
+                                                                c0,1.5-0.2,3-0.9,4.4c-1.3,2.8-3.6,4.4-6.6,4.9c-0.6,0.1-1.3,0.2-1.9,0.2c-4.4,0-8.8,0-13.3,0c-2.3,0-4.4-0.6-6.2-2.1
+                                                                c-1.8-1.5-2.8-3.5-3.1-5.8C0,23.7,0,23.3,0,22.9c0-4.6,0-9.3,0-13.9c0-2.5,0.9-4.8,2.8-6.6c1.6-1.5,3.5-2.2,5.6-2.3
+                                                                C10.9,0,13.5,0.1,16,0C16,0,16,0,16,0z M16,29c2.1,0,4.3,0,6.4,0c0.6,0,1.1,0,1.7-0.1c2.1-0.4,3.7-1.4,4.5-3.5
+                                                                c0.4-1,0.6-2.1,0.6-3.2c0.1-4.2,0-8.3,0-12.5c0-0.5,0-0.9-0.1-1.4c-0.3-2-1.2-3.6-3-4.6C25.1,3.2,24,3,22.8,3c-4.5,0-8.9,0-13.4,0
+                                                                C9,3,8.6,3,8.2,3.1C5.9,3.4,4.2,4.5,3.4,6.7C3.1,7.6,3,8.5,3,9.5c0,4.4,0,8.7,0,13.1c0,0.5,0,1.1,0.1,1.6c0.4,2.3,1.7,3.9,4,4.6
+                                                                C7.9,28.9,8.7,29,9.5,29C11.7,29.1,13.8,29,16,29z"/>
+                                                    <path d="M24.2,15.9c0,4.6-3.7,8.3-8.3,8.2c-4.6,0-8.2-3.7-8.2-8.3c0-4.6,3.7-8.3,8.3-8.3C20.5,7.7,24.2,11.4,24.2,15.9z M16,21.2
+                                                                c2.9,0,5.3-2.4,5.3-5.3c0-2.9-2.4-5.3-5.3-5.3c-2.9,0-5.3,2.4-5.3,5.3C10.7,18.8,13.1,21.2,16,21.2z"/>
+                                                    <path d="M24.6,9.4c-1,0-1.8-0.8-1.8-1.9c0-1,0.8-1.9,1.9-1.9c1,0,1.9,0.8,1.8,1.9C26.4,8.5,25.6,9.4,24.6,9.4z"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="block-social__item">
+                                    <a class="block-social__link block-social__link--vk" href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             x="0px" y="0px" viewBox="0 0 35 19" xml:space="preserve">
+                                            <g>
+                                                <path d="M34.8,17.2c0-0.1-0.1-0.2-0.1-0.2c-0.6-1-1.8-2.3-3.5-3.8l0,0l0,0l0,0h0c-0.8-0.7-1.3-1.2-1.5-1.4
+                                                    c-0.4-0.5-0.5-0.9-0.3-1.4c0.1-0.4,0.7-1.1,1.6-2.3c0.5-0.6,0.9-1.1,1.2-1.5c2.1-2.7,3-4.4,2.7-5.1l-0.1-0.2
+                                                    c-0.1-0.1-0.3-0.2-0.6-0.3c-0.3-0.1-0.7-0.1-1.2,0l-5.2,0c-0.1,0-0.2,0-0.4,0c-0.2,0-0.2,0.1-0.2,0.1l-0.1,0l-0.1,0.1
+                                                    c-0.1,0-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.3c-0.6,1.4-1.2,2.7-2,3.9c-0.4,0.7-0.9,1.3-1.2,1.9c-0.4,0.5-0.7,0.9-0.9,1.2
+                                                    c-0.3,0.2-0.5,0.4-0.7,0.6c-0.2,0.2-0.4,0.2-0.5,0.2c-0.1,0-0.2,0-0.3-0.1c-0.2-0.1-0.3-0.2-0.4-0.4c-0.1-0.2-0.2-0.4-0.2-0.7
+                                                    c0-0.3-0.1-0.5-0.1-0.7c0-0.2,0-0.5,0-0.8c0-0.4,0-0.6,0-0.7c0-0.4,0-0.9,0-1.4c0-0.5,0-0.9,0-1.2c0-0.3,0-0.6,0-1s0-0.6-0.1-0.8
+                                                    c0-0.2-0.1-0.4-0.2-0.6c-0.1-0.2-0.2-0.3-0.4-0.4c-0.2-0.1-0.4-0.2-0.6-0.2C18.7,0.1,17.8,0,16.8,0c-2.3,0-3.7,0.1-4.4,0.4
+                                                    c-0.3,0.1-0.5,0.3-0.7,0.5c-0.2,0.3-0.2,0.4-0.1,0.4c0.7,0.1,1.2,0.4,1.5,0.7l0.1,0.2c0.1,0.2,0.2,0.4,0.3,0.8
+                                                    c0.1,0.4,0.1,0.8,0.2,1.3c0.1,0.8,0.1,1.6,0,2.2c-0.1,0.6-0.1,1.1-0.2,1.4s-0.1,0.6-0.2,0.8c-0.1,0.2-0.2,0.3-0.2,0.4
+                                                    c0,0-0.1,0.1-0.1,0.1c-0.2,0.1-0.3,0.1-0.5,0.1c-0.2,0-0.4-0.1-0.6-0.2c-0.2-0.2-0.5-0.4-0.8-0.7c-0.3-0.3-0.6-0.7-0.9-1.2
+                                                    c-0.3-0.5-0.7-1.1-1-1.8L9,4.9C8.8,4.6,8.6,4.1,8.2,3.5C7.9,2.9,7.6,2.3,7.4,1.7C7.3,1.5,7.2,1.3,7,1.1L6.9,1.1
+                                                    C6.8,1,6.7,1,6.6,0.9C6.4,0.9,6.3,0.9,6.2,0.8l-5,0c-0.5,0-0.9,0.1-1,0.3L0.1,1.3C0,1.4,0,1.5,0,1.6C0,1.7,0,1.9,0.1,2
+                                                    c0.7,1.6,1.5,3.2,2.4,4.7s1.6,2.7,2.2,3.7C5.4,11.3,6,12.2,6.7,13c0.7,0.8,1.1,1.3,1.3,1.6c0.2,0.2,0.4,0.4,0.5,0.5l0.5,0.4
+                                                    c0.3,0.3,0.7,0.6,1.3,1c0.6,0.4,1.2,0.8,1.9,1.1c0.7,0.4,1.5,0.7,2.4,0.9c0.9,0.2,1.8,0.3,2.7,0.3h2.1c0.4,0,0.7-0.2,1-0.4l0.1-0.1
+                                                    c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0.1-0.3,0.1-0.5c0-0.5,0-0.9,0.1-1.3c0.1-0.4,0.2-0.7,0.3-0.9c0.1-0.2,0.2-0.4,0.4-0.5
+                                                    c0.1-0.1,0.2-0.2,0.3-0.3c0.1,0,0.1,0,0.1-0.1c0.3-0.1,0.6,0,1,0.3c0.4,0.3,0.8,0.6,1.1,1c0.3,0.4,0.8,0.8,1.2,1.3
+                                                    c0.5,0.5,0.9,0.9,1.3,1.1l0.4,0.2c0.2,0.1,0.6,0.3,0.9,0.4c0.4,0.1,0.7,0.1,1,0.1l4.7-0.1c0.5,0,0.8-0.1,1.1-0.2
+                                                    c0.3-0.1,0.4-0.3,0.5-0.5c0-0.2,0.1-0.4,0-0.6C34.9,17.4,34.9,17.2,34.8,17.2z"/>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-second">
+                <div class="siteWidth">
+                    <div class="row">
+
+                        <!-- BEGIN MAIN MENU -->
+                        <div class="header-second-menu col">
+                            <div class="header-menu__wrapp">
+                                <a class="button-menu" rel="nofollow" href="#"><div class="menu-fader"></div><span></span></a>
+                                <div class="box-main-menu">
+                                    <a href="javascript:void(0)" title="" class="close-menu" rel="nofollow">X</a>
+                                    <ul class="main-menu">
+                                        <li class="sub-menu">
+                                            <a href="#">Нострификация аттестата</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">pVZP - страхование</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Стоимость страхования</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Важное о страховании</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-menu">
+                                            <a href="#">Медицинское страхование</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">pVZP - страхование</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Стоимость страхования</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Важное о страховании</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#">Помощь и поддержка</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ЧТУ в Праге</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Факультеты</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">ФЭЛ</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Кафедра</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">История</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Исследования</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Специфика</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="#">Информация</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Контакты</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Почему мы?</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END MAIN MENU -->
+
+                        <div class="header-nav col">
+                            <ul class="header-menu">
+                                <li>
+                                    <a href="#">Специфика</a>
+                                </li>
+                                <li>
+                                    <a href="#">Информация</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">Почему мы?</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!-- END HEADER -->
+
+
+        <!-- BEGIN SECTION CONTACT -->
+        <div class="sectionContact">
+
+            <!-- BEGIN BLOCK MAP-->
+            <div class="blockMap">
+                <div id="map"></div>
+            </div>
+            <!-- END BLOCK MAP -->
+
+            <!-- BEGIN CONTACT ONE-->
+            <div class="contact-one full-bg">
+                <div class="siteWidth">
+                    <div class="contact-one__text">
+                        <strong class="contact-one__title">КОНТАКТЫ И АДРЕС ШКОЛЫ В ПРАГЕ</strong>
+                        <p class="contact-one__desc">
+                            Вы можете посетить нас в нашей школе по адресу - Technická 1902/2б, 160 00 Praha 6-Dejvice, Czech Republic<br />
+                            Либо написать нам на электронную почту - info@vertexschool.cz<br />
+                            Также связаться с нами по телефону +420 776-170-817<br />
+                            Мы обязательно постараемся ответить на все интересующие Вас вопросы.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTACT ONE-->
+
+            <!-- BEGIN BLOCK MAP-->
+            <div class="contact-info">
+                <div class="siteWidth">
+                    <div class="row">
+                        <div class="block-one col">
+                            <h3 class="contact-info__title"><span>ГЕНЕРАЛЬНЫЙ ПАРТНЕР В РЕСПУБЛИКЕ КАЗАХСТАН</span></h3>
+                            <ul class="contact-info__list">
+                                <li>Адрес: Technická 1902/2б, 160 00 Praha 6-Dejvice, Czech Republic</li>
+                                <li>Email: <a href="mailto:info@vertexschool.cz">info@vertexschool.cz</a></li>
+                                <li>Телефон: <a href="tel:+420776170817">+420 776-170-817</a></li>
+                            </ul>
+
+                            <div class="list-contacts row">
+                                <div class="item-contact col">
+                                    <div class="wrapp-inner">
+                                        <strong class="item-contact__title"><span>ОФИС В Г.АСТАНА</span></strong>
+                                        <ul class="list-address">
+                                            <li class="item-address">
+                                                <span class="item-address__link item-address__link--address">Technická 1902/2б, 160 00<br /> Praha 6-Dejvice, Czechia</span>
+                                            </li>
+                                            <li class="item-address">
+                                                <a class="item-address__link item-address__link--phone" href="tel:+420776170817">+420 776-170-817</a>
+                                            </li>
+                                            <li class="item-address">
+                                                <a class="item-address__link item-address__link--email" href="mailto:info@vertexschool.cz">info@vertexschool.cz</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item-contact col">
+                                    <div class="wrapp-inner">
+                                        <strong class="item-contact__title"><span>ОФИС В Г.АСТАНА</span></strong>
+                                        <ul class="list-address">
+                                            <li class="item-address">
+                                                <span class="item-address__link item-address__link--address">Technická 1902/2б, 160 00<br /> Praha 6-Dejvice, Czechia</span>
+                                            </li>
+                                            <li class="item-address">
+                                                <a class="item-address__link item-address__link--phone" href="tel:+420776170817">+420 776-170-817</a>
+                                            </li>
+                                            <li class="item-address">
+                                                <a class="item-address__link item-address__link--email" href="mailto:info@vertexschool.cz">info@vertexschool.cz</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="item-contact col">
+                                    <div class="wrapp-inner">
+                                        <strong class="item-contact__title"><span>ОФИС В Г.АСТАНА</span></strong>
+                                        <ul class="list-address">
+                                            <li class="item-address">
+                                                <span class="item-address__link item-address__link--address">Technická 1902/2б, 160 00<br /> Praha 6-Dejvice, Czechia</span>
+                                            </li>
+                                            <li class="item-address">
+                                                <a class="item-address__link item-address__link--phone" href="tel:+420776170817">+420 776-170-817</a>
+                                            </li>
+                                            <li class="item-address">
+                                                <a class="item-address__link item-address__link--email" href="mailto:info@vertexschool.cz">info@vertexschool.cz</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <blockquote class="cite cite--contact">
+                                <p class="cite--contact__desc">
+                                    Также Вы можете заполнить форму быстрого сообщения нам. Это<br />
+                                    сэкономит Вам время и усилия.<strong>С уважением команда Vertexschool</strong>
+                                </p>
+                            </blockquote>
+
+                        </div>
+
+                        <div class="block-second col">
+                            <h3 class="contact-info__title"><span>НАПИСАТЬ НАМ</span></h3>
+                            <p class="form-p form-p--one">Также Вы можете заполнить форму быстрого сообщения нам. Это сэкономит Вам время и усилия.</p>
+                            <p class="form-p"><strong>С уважением команда Vertexschool</strong></p>
+                            <div class="box-form">
+                                <form action=""  name="call-form" class="form-content call-form" method="post">
+                                    <div class="block-input">
+                                        <input type="text" name="name" placeholder="Имя" />
+                                    </div>
+                                    <div class="block-input">
+                                        <input type="text" name="phone" placeholder="Телефон" required />
+                                    </div>
+                                    <div class="block-input">
+                                        <input type="text" name="email" placeholder="Email" required />
+                                    </div>
+                                    <div class="block-input block-message">
+                                        <textarea name="message" placeholder="Сообщение" required></textarea>
+                                    </div>
+                                    <button class="btn btn--form" type="submit">Отправить</button>
+                                    <input type="hidden" name="order-call-2" />
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- END BLOCK MAP -->
+
+        </div>
+        <!-- END SECTION CONTACT -->
+
+    </div>
+    <!-- END ALL WRAPPER -->
+
+    <!-- BEGIN FOOTER -->
+    <footer class="footer">
+        <div class="siteWidth">
+            <div class="row">
+                <div class="footer-copy col">
+                    <p class="copy">
+                        Copyright © vertexschool.cz. Все права защищены.
+                    </p>
+                </div>
+                <div class="footer-links col">
+                    <div class="block-links">
+                        <a href="mailto:info@vertexschool.cz">info@vertexschool.cz</a><br />
+                        <a class="footer__phone" href="tel:+420776170817">+420 776 170 817</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- BEGIN MODAL -->
+    <div class="thanks reveal-modal" id="thanks">
+        <span class="close-popap close-reveal-modal">X</span>
+        <div class="wrapp-modal">
+            <div class="wrapp-thanks">
+                <p>
+                    <strong>Спасибо за сообщение,<br /> наш менеджер свяжется с Вами</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.form-min.js"></script>
+    <script type="text/javascript" src="js/scripts.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+        
+</body>
+</html>
