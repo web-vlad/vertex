@@ -168,50 +168,58 @@ $(document).ready(function() {
         ]*/
     });
 
+    // GALLERY
+    var filterList = {
+        init: function () {
+            $('#portfoliolist').mixitup({
+                targetSelector: '.portfolio',
+                filterSelector: '.filter',
+                effects: ['fade'],
+                easing: 'snap',
+                // call the hover effect
+                onMixEnd: filterList.hoverEffect()
+            });
+        },
+        hoverEffect: function () {
+            /*$('#portfoliolist .portfolio').hover(
+                function () {
+                    $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+                    $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
+                },
+                function () {
+                    $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+                    $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
+                }
+            );*/
 
-});
-
-/**
- * @package     SP Simple Portfolio
- *
- * @copyright   Copyright (C) 2010 - 2015 JoomShaper. All rights reserved.
- * @license     GNU General Public License version 2 or later.
- */
-
-jQuery(function($) {
-
-    var $container 	= $('.sp-simpleportfolio-items');
-
-    $(window).load(function() {
-        var $sizer = $container.find('.shuffle__sizer');
-
-        $container.shuffle({
-            itemSelector: '.sp-simpleportfolio-item',
-            sequentialFadeDelay: 150,
-            sizer: $sizer
-        });
-    });
-
-
-    // Filters
-    $('.sp-simpleportfolio-filter li a').on('click', function(event){
-        event.preventDefault();
-        var $self = $(this);
-        var $this = $(this).parent();
-
-        if($this.hasClass('active')) {
-            return;
         }
 
-        $self.closest('ul').children().removeClass('active');
-        $self.parent().addClass('active');
+    };
+    filterList.init();
 
-        $container.shuffle( 'shuffle', $this.data('group') );
+    //
+    // Fancybox Video Galleries
+    $(".f-gallery").fancybox({
+
+        afterShow: function() {
+            // After the show-slide-animation has ended - play the video
+            this.content.find('video').trigger('play')
+            // Trigger fancybox.next() once the video has ended
+            this.content.find('video').on('ended', function() {
+                $.fancybox.next();
+            });
+        }
+
     });
 
+    /*$('[data-video]').fancybox({
+        // Options will go here
+        buttons : [
+            'zoom',
+            'close'
+        ]
+    });*/
+
+
 });
-
-
-
-
 
