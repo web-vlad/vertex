@@ -227,63 +227,277 @@
         <!-- END BLOCK PAGE HEAD -->
 
         <!-- BEGIN VIDEO GALLERY -->
-        <div class="v-gallery">
+        <div class="b-video">
             <div class="siteWidth">
 
-                <!-- BEGIN BLOCK REVIEWS -->
-                <div id="sp-simpleportfolio" class="sp-simpleportfolio sp-simpleportfolio-view-items layout-gallery-nospace">
+                <!-- BEGIN GALLERY -->
+                <div class="v-gallery">
 
-                    <div class="sp-simpleportfolio-filter">
-                        <ul>
-                            <li class="active" data-group="all"><a href="#">Все</a></li>
-                            <li data-group="training" class=""><a href="#">Обучение</a></li>
-                            <li data-group="residence" class=""><a href="#">Проживание</a></li>
-                            <li data-group="nostrification" class=""><a href="#">Нострификация</a></li>
-                            <li data-group="receipt" class=""><a href="#">Поступление</a></li>
-                        </ul>
+                    <ul id="filters" class="gallery-filter">
+                        <li class="gallery-filter__item">
+                            <span class="filter active" data-filter="training residence nostrification receipt" >Все</span>
+                        </li>
+                        <li class="gallery-filter__item">
+                            <span class="filter" data-filter="training">Обучение</span>
+                        </li>
+                        <li class="gallery-filter__item">
+                            <span class="filter" data-filter="residence">Проживание</span>
+                        </li>
+                        <li class="gallery-filter__item">
+                            <span class="filter" data-filter="nostrification">Нострификация</span>
+                        </li>
+                        <li class="gallery-filter__item">
+                            <span class="filter" data-filter="receipt">Поступление</span>
+                        </li>
+                    </ul>
+
+                    <div id="portfoliolist" class="list-portfolio list-portfolio--video row">
+
+                        <div class="portfolio portfolio--video training col" data-cat="training">
+                            <a class="portfolio__wrapper f-gallery" href="#video_1" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="portfolio portfolio--video training col" data-cat="training">
+                            <a class="portfolio__wrapper f-gallery" href="#video_2" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="portfolio portfolio--video residence col" data-cat="residence">
+                            <a class="portfolio__wrapper f-gallery" href="#video_3" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="portfolio portfolio--video residence col" data-cat="residence">
+                            <a class="portfolio__wrapper f-gallery" href="#video_4" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="portfolio portfolio--video residence col" data-cat="residence">
+                            <a class="portfolio__wrapper f-gallery" href="#video_5" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="portfolio portfolio--video nostrification col" data-cat="nostrification">
+                            <a class="portfolio__wrapper f-gallery" href="#video_6" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio portfolio--video nostrification col" data-cat="nostrification">
+                            <a class="portfolio__wrapper f-gallery" href="#video_7" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="portfolio portfolio--video receipt col" data-cat="receipt">
+                            <a class="portfolio__wrapper f-gallery" href="#video_8" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio portfolio--video receipt col" data-cat="receipt">
+                            <a class="portfolio__wrapper f-gallery" href="#video_9" data-video="video-gallery">
+                                <div class="portfolio__img">
+                                    <img src="images/video.jpg" alt="#" />
+                                </div>
+                                <div class="portfolio__info">
+                                    <div class="portfolio__text">
+                                        <strong class="portfolio__title">ЗНАКОМСТВО</strong>
+                                        <span class="portfolio__desc">c Vertex school</span>
+                                        <span class="portfolio__button"></span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
-
-                    <div class="sp-simpleportfolio-items sp-simpleportfolio-columns-4 shuffle">
-
-                        <div class="sp-simpleportfolio-item shuffle-item filtered" data-groups="['training']">
-                            <div class="sp-simpleportfolio-overlay-wrapper">
-                                <img class="sp-simpleportfolio-img" src="images/video.jpg" alt="#">
-
-                            </div>
-                        </div>
-
-                        <div class="sp-simpleportfolio-item shuffle-item filtered" data-groups="['training']">
-                            <div class="sp-simpleportfolio-overlay-wrapper">
-                                <img class="sp-simpleportfolio-img" src="images/video.jpg" alt="#">
-
-                            </div>
-                        </div>
-
-                        <div class="sp-simpleportfolio-item shuffle-item filtered" data-groups="['training']">
-                            <div class="sp-simpleportfolio-overlay-wrapper">
-                                <img class="sp-simpleportfolio-img" src="images/video.jpg" alt="#">
-
-                            </div>
-                        </div>
-
-                        <div class="sp-simpleportfolio-item shuffle-item filtered" data-groups="['residence']">
-                            <div class="sp-simpleportfolio-overlay-wrapper">
-                                <img class="sp-simpleportfolio-img" src="images/video.jpg" alt="#">
-
-                            </div>
-                        </div>
-
-                        <div class="sp-simpleportfolio-item shuffle-item filtered" data-groups="['residence']">
-                            <div class="sp-simpleportfolio-overlay-wrapper">
-                                <img class="sp-simpleportfolio-img" src="images/video.jpg" alt="#">
-
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div>
-                <!-- END BLOCK REVIEWS -->
+                <!-- END GALLERY-->
+
+                <div id="video_1" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_2" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_3" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_4" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_5" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_6" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_7" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_8" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
+                <div id="video_9" class="f-video">
+                    <div class="f-video__text">
+                        <strong class="f-video__caption">ЗНАКОМСТВО c Vertex school</strong>
+                    </div>
+                    <div class="f-video__block">
+                        <video controls width="100%" height="auto">
+                            <source src="video/video.mp4" type="video/mp4">
+                            <source src="video/video.webm" type="video/webm">
+                            <source src="video/video.ogv" type="video/ogg">
+                        </video>
+                    </div>
+                </div>
 
             </div>
         </div>
